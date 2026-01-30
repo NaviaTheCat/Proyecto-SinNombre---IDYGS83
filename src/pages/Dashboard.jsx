@@ -5,6 +5,7 @@ import { FaUser } from "react-icons/fa";
 import { FaUniversity } from "react-icons/fa";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
+import ButtonRag from "../components/ButtonRag";
 
 function Dashboard() {
   const events = [{ title: "Meeting", start: new Date() }];
@@ -39,7 +40,7 @@ function Dashboard() {
         </div>
       </div>
 
-      <div className="ml-60 pb-10 px-10">
+      <div className="ml-60 pb-36 px-10">
         
         <div className="p-2">
           <FullCalendar
@@ -55,6 +56,8 @@ function Dashboard() {
             height="auto"
             contentHeight="auto"
           />
+
+          <ButtonRag></ButtonRag>
         </div>
       </div>
     </div>
