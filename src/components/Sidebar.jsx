@@ -9,11 +9,11 @@ import { IoIosHelpCircle } from "react-icons/io";
 function Sidebar() {
   return (
     <div>
-      <div className="bg-[#031C30] w-60 h-screen fixed">
+      <div className="bg-[#263E51] w-60 h-screen fixed top-0">
         <div>
            
             <div className="flex flex-col gap-y-2 text-white mx-10 pt-10">
-                 <FaCircleUser size="7rem"/>
+                 <FaCircleUser size="5rem"/>
                 <h1 className="text-xl font-semibold">Alumno</h1>
                 <h2 className="text-lg">ARTURO DIAZ</h2>
             </div>    
