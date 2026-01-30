@@ -1,11 +1,15 @@
-import React from 'react'
+import React from "react";
+import Sidebar from "../components/Sidebar";
+import Header from "../components/Header";
 
 function Dashboard() {
   return (
     <div>
-      adg
+        <Header></Header>
+      <Sidebar></Sidebar>
+
     </div>
-  )
+  );
 }
 
-export default Dashboard
+export default Dashboard;
