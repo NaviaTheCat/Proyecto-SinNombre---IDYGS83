@@ -4,6 +4,7 @@ import { FaHistory } from "react-icons/fa";
 import { IoHome } from "react-icons/io5";
 import { SiGoogledocs } from "react-icons/si";
 import { IoIosHelpCircle } from "react-icons/io";
+import { Link } from 'react-router-dom';
 
 
 function Sidebar() {
@@ -20,10 +21,11 @@ function Sidebar() {
         </div>
 
         <div className="flex flex-col gap-y-2  mt-20 mx-5 text-white font-semibold">
-                <button className="flex items-center gap-x-4 p-3 rounded-lg hover:bg-white hover:bg-opacity-30"><IoHome size="2rem" />Dashboard</button>
-                <button className="flex items-center gap-x-4 p-3 rounded-lg hover:bg-white hover:bg-opacity-30"><SiGoogledocs size="2rem" />Tramites</button>
-                <button className="flex items-center gap-x-4 p-3 rounded-lg hover:bg-white hover:bg-opacity-30"><FaHistory size="2rem" />Mis tramites</button>
-                <button className="flex items-center gap-x-4 p-3 rounded-lg hover:bg-white hover:bg-opacity-30"><IoIosHelpCircle size="2rem" />Asistente</button>
+
+                <Link to="/"  className="flex items-center gap-x-4 p-3 rounded-lg hover:bg-white hover:bg-opacity-30"><IoHome size="2rem" />Dashboard</Link>
+                <Link to="/catalogo"  className="flex items-center gap-x-4 p-3 rounded-lg hover:bg-white hover:bg-opacity-30"><SiGoogledocs size="2rem" />Tramites</Link>
+                <Link to="/mistramites" className="flex items-center gap-x-4 p-3 rounded-lg hover:bg-white hover:bg-opacity-30"><FaHistory size="2rem" />Mis tramites</Link>
+                <Link to="/asistente" className="flex items-center gap-x-4 p-3 rounded-lg hover:bg-white hover:bg-opacity-30"><IoIosHelpCircle size="2rem" />Asistente</Link>
         </div>
       </div>
     </div>
