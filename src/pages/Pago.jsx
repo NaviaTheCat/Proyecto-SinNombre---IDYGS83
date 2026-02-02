@@ -18,25 +18,25 @@ function Pago() {
           </h1>
 
           <form className="space-y-4">
-            <div className="flex flex-col space-y-4 md:space-y-0">
+            <div className="flex flex-col space-y-4">
               <input
-                className="border p-2 md:mb-8 rounded-lg"
+                className="border p-2 rounded-lg"
                 placeholder="Nombre Completo del titular"
               ></input>
 
               <input
-                className="border p-2 md:mb-8 rounded-lg"
+                className="border p-2 rounded-lg"
                 placeholder="Numero de tarjeta"
                 type="number"
               ></input>
               <div className="space-x-0 md:space-x-6 flex flex-col md:flex-row gap-2">
                 <input
-                  className="border p-2 md:mb-8 rounded-lg w-full md:w-[50%]"
+                  className="border p-2  rounded-lg w-full md:w-[50%]"
                   placeholder="Fecha Vencimiento"
                   type="date"
                 ></input>
                 <input
-                  className="border p-2 md:mb-8 rounded-lg w-full md:w-[40%]"
+                  className="border p-2 rounded-lg w-full md:w-[40%]"
                   placeholder="CVV"
                   type="number"
                 ></input>
@@ -44,7 +44,7 @@ function Pago() {
             </div>
             <div className="flex flex-col sm:flex-row gap-3 justify-between mt-6">
               <Link
-                to="/"
+                to="/formulario"
                 className="bg-red-600 p-3 text-white rounded-lg hover:bg-red-300 text-center flex-1 sm:flex-none"
               >
                 Cancelar

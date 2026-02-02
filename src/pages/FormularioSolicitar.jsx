@@ -18,27 +18,27 @@ function FormularioSolicitar() {
           </h1>
 
           <form className="space-y-4">
-            <div className="flex flex-col space-y-4 md:space-y-0">
+            <div className="flex flex-col space-y-4">
               <input
-                className="border p-2 md:mb-8 rounded-lg"
+                className="border p-2  rounded-lg"
                 placeholder="Nombre Completo"
               ></input>
 
               <input
-                className="border p-2 md:mb-8 rounded-lg"
+                className="border p-2  rounded-lg"
                 placeholder="Matricula"
               ></input>
 
-              <input className="border p-2 md:mb-8 rounded-lg" placeholder="Carrera"></input>
+              <input className="border p-2 rounded-lg" placeholder="Carrera"></input>
 
-              <select className="border p-2 md:mb-8 rounded-lg" defaultValue="">
+              <select className="border p-2  rounded-lg" defaultValue="">
                 <option value="" disabled>Selecciona una opción de entrega</option>
                 <option>1</option>
                 <option>1</option>
               </select>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 justify-between mt-6">
-              <Link to="/" className="bg-red-600 p-3 text-white rounded-lg hover:bg-red-300 text-center flex-1 sm:flex-none">Cancelar</Link>
+              <Link to="/catalogo" className="bg-red-600 p-3 text-white rounded-lg hover:bg-red-300 text-center flex-1 sm:flex-none">Cancelar</Link>
               <Link to="/pago" className="bg-[#00fcfc] p-3 rounded-lg hover:bg-[#01abab] text-center flex-1 sm:flex-none">Siguiente</Link>
             </div>
           </form>
