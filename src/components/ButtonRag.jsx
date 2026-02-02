@@ -1,11 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { HiChatAlt2 } from "react-icons/hi";
+import Asistente from './Asistente';
 
 
 function ButtonRag() {
+  const [abierto, setAbierto] = useState(false)
+
   return (
-    <div className='fixed z-10 bottom-10 right-10'>
-      <button className='bg-[#2CA2FD] shadow-lg text-white p-3 rounded-[90px] hover:bg-blue-400'><HiChatAlt2 className='' size="3rem"/></button>
+    <div className='fixed z-10 bottom-4 md:bottom-10 right-4 md:right-10'>
+      {!abierto && (
+        <button 
+          onClick={() => setAbierto(true)}
+          className='bg-[#2CA2FD] shadow-lg text-white p-2 md:p-3 rounded-[90px] hover:bg-blue-500 transition-all'
+        >
+          <HiChatAlt2 size="2rem" className="md:w-12 md:h-12"/>
+        </button>
+      )}
+
+      {abierto && (
+        <div className='fixed bottom-4 md:bottom-10 right-4 md:right-10 w-72 md:w-96 bg-white rounded-lg shadow-2xl border overflow-hidden flex flex-col'>
+          <div className='p-3 md:p-4 h-80 md:h-[420px] overflow-hidden'>
+            <Asistente onClose={() => setAbierto(false)} />
+          </div>
+        </div>
+      )}
     </div>
   )
 }

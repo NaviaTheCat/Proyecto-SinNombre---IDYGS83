@@ -1,27 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import Sidebar from "../components/Sidebar";
 import Header from "../components/Header";
 import CardTramite from "../components/CardTramite";
 import ButtonRag from "../components/ButtonRag";
 
 function CatalogoTramites() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
     <div>
-      <Sidebar></Sidebar>
-      <Header></Header>
-      <h1 className="ml-80 mt-20 text-xl font-bold">
+      <Header onMenuClick={() => setSidebarOpen(!sidebarOpen)}></Header>
+      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)}></Sidebar>
+      <h1 className="md:ml-80 ml-4 mt-20 text-lg md:text-xl font-bold px-2">
         Catalogo de tramites Universitarios
       </h1>
 
-      <div className="ml-80 mt-8">
+      <div className="md:ml-80 mt-8 px-4 md:px-0 md:pr-8">
         <input
-          className="bg-white border border-opacity-10 rounded-md p-2 w-[93%]"
+          className="border border-gray-400 rounded-[20px] p-2 w-full"
           placeholder="Buscar"
           type="text"
         ></input>
       </div>
 
-      <div className="ml-80 mt-8 mb-8 grid grid-cols-3 gap-y-10">
+      <div className="md:ml-80 mt-8 mb-8 px-4 md:px-0 md:pr-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 auto-rows-max">
         <CardTramite></CardTramite>
         <CardTramite></CardTramite>
         <CardTramite></CardTramite>

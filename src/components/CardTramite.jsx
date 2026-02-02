@@ -1,28 +1,29 @@
 import React from "react";
 import { LuNotebookText } from "react-icons/lu";
+import { Link } from "react-router-dom";
 
 function CardTramite() {
   return (
-    <div>
-      <div className="bg-white rounded-lg shadow-lg p-5 w-[80%] border">
-        <div className="flex space-x-4 mt-3 mb-3">
-          <div className="bg-white rounded-[70px] p-3 border">
-            <LuNotebookText size="2rem" />
+    <div className="w-full">
+      <div className="bg-white rounded-lg shadow-lg p-4 md:p-5 border h-full flex flex-col">
+        <div className="flex space-x-3 md:space-x-4 mt-2 md:mt-3 mb-3">
+          <div className="bg-white rounded-[70px] p-2 md:p-3 border flex-shrink-0">
+            <LuNotebookText size="1.5rem" className="md:w-8 md:h-8" />
           </div>
-          <h1 className="text-xl font-semibold">Constancia de estudios</h1>
+          <h1 className="text-base md:text-xl font-semibold">Constancia de estudios</h1>
         </div>
 
-        <p>
+        <p className="text-sm md:text-base flex-grow">
           Documento oficial que certifica tu inscripción activa en la
           institución
         </p>
-        <div className="flex space-x-40 p-2 border mt-5 mb-10 rounded-lg">
-          <p>Costo</p>
-          <p>150$</p>
+        <div className="flex justify-between p-2 border mt-5 mb-5 md:mb-10 rounded-lg">
+          <p className="text-sm md:text-base">Costo</p>
+          <p className="text-sm md:text-base">150$</p>
         </div>
-        <button className="bg-[#00FFFF] p-2 rounded-lg hover:bg-[#2fbdbd]">
+        <Link to="/formulario" className="bg-[#00FFFF] p-2 rounded-lg hover:bg-[#2fbdbd] text-center text-sm md:text-base font-medium w-full">
           Solicitar
-        </button>
+        </Link>
       </div>
     </div>
   );
